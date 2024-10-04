@@ -2,9 +2,9 @@ let chunkOne = [ 'Lebron', 'Aaliyah', 'Diamond', 'Dominique', 'Aliyah', 'Jazmin'
 let chunkTwo = [ 'Lucas', 'Jake', 'Scott', 'Amy', 'Molly', 'Hannah', 'Lucas' ];
 
 const mergeArrays = (firstArray, secondArray) => {
-    let newArray = []
-    // Your code here
-    return newArray
-}
+    return [...firstArray, ...secondArray];
+    
+};
+const mergedArrays = mergeArrays(chunkOne, chunkTwo);
 
 console.log(mergeArrays(chunkOne, chunkTwo));

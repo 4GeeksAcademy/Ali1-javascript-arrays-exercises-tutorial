@@ -1,12 +1,21 @@
-let tasks = [
-  { label: "Eat my lunch", done: true },
-  { label: "Make the bed", done: false },
-  { label: "Have some fun", done: false },
-  { label: "Finish the replits", done: false },
-  { label: "Finish my exercises", done: true },
-  { label: "Ask for a raise", done: false },
-  { label: "Read a book", done: true },
-  { label: "Make a trip", done: false },
+let names = [
+  'Liam', 'Noah', 'Oliver', 'Elijah', 'William',
+  'James', 'Benjamin', 'Lucas', 'Henry', 'Alexander',
+  'Amelia', 'Charlotte', 'Ava', 'Sophia', 'Isabella',
+  'Mia', 'Evelyn', 'Harper', 'Camila', 'Gianna',
+  'Samuel', 'Jacob', 'John', 'Luke', 'Matthew'
 ];
 
-// Your code here
+// Function to filter names
+function filterByName(array, filterCriteria) {
+  return array.filter(function(name) {
+    // Check if the name includes the filter criteria (case insensitive)
+    return name.toLowerCase().includes(filterCriteria.toLowerCase());
+  });
+}
+
+// Call the function with the filter criteria
+let filteredNames = filterByName(names, 'am');
+
+// Print the filtered names to the console
+console.log(filteredNames); 

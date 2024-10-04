@@ -2,5 +2,14 @@ let par = "Lorem ipsum dolor sit amet consectetur adipiscing elit Curabitur eget
 let counts = {};
 
 // Your code here
-
+for (let char of par) {
+    if(char !== " ") {
+        char = char.toLowerCase();
+        if (counts[char]) {
+            counts[char]++;
+        } else {
+            counts[char] = 1;
+        }
+    }
+}
 console.log(counts);

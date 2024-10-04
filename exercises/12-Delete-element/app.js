@@ -1,7 +1,16 @@
-let people = ['juan','ana','michelle','daniella','stefany','lucy','barak', 'emilio'];
+let people = ['juan', 'ana', 'michelle', 'daniella', 'stefany', 'lucy', 'barak', 'emilio'];
 
-// Your code below
+// Define the deletePerson function
+const deletePerson = (personToDelete) => {
+    return people.filter(person => person !== personToDelete);
+};
 
-console.log(deletePerson('daniella'));
-console.log(deletePerson('juan'));
-console.log(deletePerson('emilio'));
+// Call the function and store the results
+const updatedList1 = deletePerson('daniella'); // Should not include 'daniella'
+const updatedList2 = deletePerson('juan');      // Should not include 'juan'
+const updatedList3 = deletePerson('emilio');    // Should not include 'emilio'
+
+// Log the updated lists
+console.log(updatedList1); // ['juan', 'ana', 'michelle', 'stefany', 'lucy', 'barak', 'emilio']
+console.log(updatedList2); // ['ana', 'michelle', 'daniella', 'stefany', 'lucy', 'barak', 'emilio']
+console.log(updatedList3); 
